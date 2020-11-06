@@ -1,0 +1,10 @@
+radio.setGroup(1)
+basic.showIcon(IconNames.No)
+basic.pause(1000)
+let Sprite = game.createSprite(2, 2)
+basic.forever(function () {
+    radio.sendValue("acc.x", input.acceleration(Dimension.X))
+    Sprite.set(LedSpriteProperty.X, randint(0, 4))
+    Sprite.set(LedSpriteProperty.Y, randint(0, 4))
+    basic.pause(100)
+})
